@@ -1,6 +1,12 @@
 <div class="cocktail list-cocktail">
-  <h2>All Cocktails</h2>
-  <p> <%= link_to "Add new cocktail", new_cocktail_path  %> </p>
+
+  <div class="banner-navbar" style="background-image: linear-gradient(-225deg, rgba(0,101,168,0.6) 0%, rgba(0,36,61,0.6) 50%), url('http://galumbi.de/wp-content/uploads/2015/06/Blue-Moon-Cocktail-1-von-1-2.jpg');">
+      <%= render 'layouts/navbar' %>
+
+    <div class="banner-content">
+      <h2>All Cocktails</h2>
+    </div>
+
   <ol class="list-unstyled">
     <% @cocktails.each do |cocktail| %>
     <li>
@@ -9,4 +15,10 @@
     <% end %>
   </ol>
 
+
+  </div>
+
+
+
 </div>
+
