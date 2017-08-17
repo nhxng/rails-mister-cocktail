@@ -4,19 +4,22 @@
       <%= render 'layouts/navbar' %>
 
     <div class="banner-content">
-      <h2>All Cocktails</h2>
+      <h1>Blame it on the alcohol</h1>
+      <%= link_to "Start Now", new_cocktail_path, class: "btn btn-primary btn-lg" %>
     </div>
-
-  <ol class="list-unstyled">
+  </div>
+  <ol class="list-unstyled cocktail-cards">
     <% @cocktails.each do |cocktail| %>
-    <li>
-      <h3> <%= link_to cocktail.name, cocktail_path(cocktail) %> </h3>
-    </li>
+    <div class="cocktail-card">
+      <li>
+        <h3> <%= link_to cocktail.name, cocktail_path(cocktail) %> </h3>
+      </li>
+    </div>
     <% end %>
   </ol>
 
 
-  </div>
+
 
 
 

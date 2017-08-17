@@ -1,3 +1,37 @@
 // Place all the styles related to the cocktails controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
+.cocktail {
+  h2 {
+    font-size: 30px;
+  }
+  h2 {
+    font-size: 25px;
+  }
+}
+
+.cocktail-cards {
+  background-color: $light-gray;
+  display: flex;
+  justify-content: center;
+}
+.cocktail-card {
+  background-color: rgba(250,250,250,0.6);
+  height: 175px;
+  width: 250px;
+  text-shadow: 0 1px 3px rgba(0,0,0,0.6);
+  background-position: center;
+  color: white;
+  text-align: center;
+  margin: 10px;
+  padding: 10px;
+
+}
+
+.new-cocktail {
+  color: $gray;
+}
+
+#dose-card {
+  color: $light-gray;
+}
