@@ -9,7 +9,6 @@
   // justify-content: center;
 }
 .banner h1 {
-  margin-top: 20px;
   font-size: 50px;
   font-weight: bold;
   text-shadow: 0px 1px rgba(0, 0, 0, 0.2);
@@ -18,7 +17,6 @@
   font-size: 25px;
   font-weight: lighter;
   color: rgb(255, 255, 255);
-  opacity: 0.6;
   margin-bottom: 20px;
 }
 
@@ -26,6 +24,7 @@
   color: white;
   h1 {
   margin-top: 70px;
+  margin-bottom: 30px;
   font-size: 45px;
   font-weight: bold;
   text-shadow: 0px 1px rgba(0, 0, 0, 0.2);
@@ -46,11 +45,13 @@
   h1 {
   font-weight: bold;
   text-shadow: 0px 1px rgba(0, 0, 0, 0.2);
+  margin-bottom: 10px;
   }
   p {
   font-size: 18px;
   font-weight: lighter;
   color: white;
   margin-bottom: 10px;
+  opacity: 0.8;
   }
 }

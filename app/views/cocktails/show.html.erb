@@ -1,18 +1,18 @@
 <div class="cocktail show-cocktail">
-  <div class="banner" id="banner-show-cocktail" style="background-image: linear-gradient(-225deg, rgba(0,101,168,0.6) 0%, rgba(0,36,61,0.6) 50%), url('http://www.hotelfahrner.com/files/hotelfahrner-bar-drinks.jpg');">
+  <div class="banner" id="banner-show-cocktail" style="background-image: linear-gradient(-225deg, rgba(0,101,168,0.8) 0%, rgba(0,36,61,0.8) 50%), url('http://www.hotelfahrner.com/files/hotelfahrner-bar-drinks.jpg');">
     <%= render 'layouts/navbar' %>
     <div class="banner-content">
       <div class="cocktail show-cocktail">
         <h1><%= @cocktail.name %></h1>
-        <p><%= link_to "Delete", cocktail_path(@cocktail), method: :delete, data: { confirm: "Are you sure?" }%><%= link_to "Back", cocktails_path  %></p>
+        <p><%= link_to "Delete", cocktail_path(@cocktail), method: :delete, data: { confirm: "Are you sure?" }%> | <%= link_to "Back", cocktails_path  %></p>
         <% if @cocktail.photo? %>
-          <%= cl_image_tag @cocktail.photo.path, width: 170, height: 200, crop: :fill, class: "img-fluid" %>
+          <%= cl_image_tag @cocktail.photo.path, width: 170, height: 200, crop: :fill, class: "cocktail-photo" %>
         <% end %>
 
         <div class="recipe">
           <% @cocktail.doses.each do |dose| %>
             <div id="dose-card">
-              <p> <%= dose.description %> <%= dose.ingredient.name %> <%= link_to "Delete", dose_path(dose), method: :delete, data: { confirm: "Are you sure?" }%></p>
+              <p> <%= dose.description %> <%= dose.ingredient.name %> | <%= link_to "Delete", dose_path(dose), method: :delete, data: { confirm: "Are you sure?" }%></p>
              </div>
           <% end %>
         </div>

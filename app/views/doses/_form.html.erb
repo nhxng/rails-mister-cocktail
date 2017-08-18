@@ -4,7 +4,7 @@
     <%= simple_form_for [@cocktail, @dose] do |f| %>
       <p> <%= f.input :ingredient, collection: Ingredient.all %> </p>
       <p> <%= f.input :description %> </p>
-      <p> <%= f.submit "add a dose", class: "btn btn-primary" %> </p>
+      <p> <%= f.submit "add dose", class: "btn btn-primary" %> </p>
     <% end %>
     </div>
   </div>
