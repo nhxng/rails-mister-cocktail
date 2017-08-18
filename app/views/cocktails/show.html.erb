@@ -4,7 +4,11 @@
     <div class="banner-content">
       <div class="cocktail show-cocktail">
         <h1><%= @cocktail.name %></h1>
-        <p><%= link_to "Back", cocktails_path  %></p>
+        <p><%= link_to "Delete", cocktail_path(@cocktail), method: :delete, data: { confirm: "Are you sure?" }%><%= link_to "Back", cocktails_path  %></p>
+        <% if @cocktail.photo? %>
+          <%= cl_image_tag @cocktail.photo.path, width: 170, height: 200, crop: :fill, class: "img-fluid" %>
+        <% end %>
+
         <div class="recipe">
           <% @cocktail.doses.each do |dose| %>
             <div id="dose-card">
